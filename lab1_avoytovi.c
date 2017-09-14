@@ -1,5 +1,5 @@
 /**Simple-C-Calculator
- * Author: Alex Voytovich (avoytovi)
+ * Author: Aleksandr Voytovich (avoytovi)
  *
  * This is a simple calculator written in C. The user gives the program a command, with a parameter. The command can be
  * one of 5, sum, sub, mul, div, and col. Sum gives you the sum of two numbers. Sub gives you the difference of two
@@ -9,17 +9,17 @@
  * "mul 4 (sum 4)" or "sum 1 (col 23)" were to be entered, the program would simply tell the user that the input is
  * invalid.
  */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <stdbool.h>
 #include <ctype.h>
-#include "solver.c"
 
 /** equation struct
  * Simple structure for storing the users input equation. The structure holds, the command, the first argument, and the
  * second argument as either an int, or a pointer to another allocated equation struct.
- * The structure is also typedefined as eq.
+ * The structure is typedefined as eq.
  */
 typedef struct Equation{
     int cmd;
@@ -41,7 +41,8 @@ typedef struct Option{
 bool check(char input[100], eq *equation, bool head);
 int parse(eq *equation, opt *option);
 int get_type(char in[100]);
-void free_eq(eq *equation);
+void collatz_sequence(int num);
+int format(int count);
 
 /** main
  * The main method of the C calculator. Takes the input from the user, checks and parses it, and displays the result.
@@ -55,7 +56,6 @@ int main() {
     input[strlen(input) - 1] = '\0';
 
     opt *option = malloc(sizeof(opt));
-    option->option = true;
 
     while(strcmp(input, "bye") != 0){
 
@@ -71,7 +71,10 @@ int main() {
                     printf("%d\n", option->result);
                 else printf("Cannot divide by 0!\n");
             }
-        }else printf("Not a valid input!\n");
+        }else{
+            printf("Not a valid input!\n");
+            parse(equation, option);//used to free any built structures
+        }
 
         memset(input, 0, sizeof(input));
         printf("avoytovi>$ ");
@@ -169,10 +172,10 @@ int parse(eq *equation, opt *option){
         return 0;
     }else{
         switch(type){
-            case 1: return addition(arg1, arg2);
-            case 2: return subtraction(arg1, arg2);
-            case 3: return multiplication(arg1, arg2);
-            case 4: return division(arg1, arg2);
+            case 1: return arg1 + arg2;//addition(arg1, arg2);
+            case 2: return arg1 - arg2;//subtraction(arg1, arg2);
+            case 3: return arg1 * arg2;//multiplication(arg1, arg2);
+            case 4: return arg1 / arg2;//division(arg1, arg2);
             default: return 0;
         }
     }
@@ -196,4 +199,40 @@ int get_type(char in[100]){
     else if(in[0] == 'c' && in[1] == 'o' && in[2] == 'l')//col = 5
         return 5;
     else return 0;                                       //unrecognized = 0
+}
+
+/** collatz_sequence
+ * Takes a positive int, and prints it's collatz sequence
+ * 15 numbers per line.
+ * @param num
+ */
+void collatz_sequence(int num){
+    printf("%d ", num);
+    int count = 0;
+    while(num!= 1){
+        if(num % 2 == 0){
+            num /= 2;
+            printf("%d ", num);
+            count = format(count);
+        }else{
+            num = num * 3 + 1;
+            printf("%d ", num);
+            count = format(count);
+        }
+    }printf("\n");
+}
+
+/** format
+ * Takes a count, and checks if number is multiple of 15.
+ * It increments the number, if the number is a multiple,
+ * it prints a new line. Finally, it returns the incremented
+ * count.
+ * @param count
+ * @return count++
+ */
+int format(int count){
+    count++;
+    if((count + 1) % 15 == 0)
+        printf("\n");
+    return count;
 }
