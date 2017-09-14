@@ -1,3 +1,4 @@
-/cygdrive/c/Users/Alex/Documents/School/CSC-322/untitled/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/cygdrive/c/Users/Alex/Documents/School/CSC-322/untitled/cmake-build-debug/CMakeFiles/edit_cache.dir
-/cygdrive/c/Users/Alex/Documents/School/CSC-322/untitled/cmake-build-debug/CMakeFiles/untitled.dir
+/cygdrive/c/Users/darki/Documents/School/2017-Fall/CSC-322/Lab1/Simple-C-Calculator/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/cygdrive/c/Users/darki/Documents/School/2017-Fall/CSC-322/Lab1/Simple-C-Calculator/cmake-build-debug/CMakeFiles/edit_cache.dir
+/cygdrive/c/Users/darki/Documents/School/2017-Fall/CSC-322/Lab1/Simple-C-Calculator/cmake-build-debug/CMakeFiles/main.dir
+/cygdrive/c/Users/darki/Documents/School/2017-Fall/CSC-322/Lab1/Simple-C-Calculator/cmake-build-debug/CMakeFiles/main.c.dir

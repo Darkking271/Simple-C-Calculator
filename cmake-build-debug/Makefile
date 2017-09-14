@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /cygdrive/c/Users/Alex/.CLion2017.1/system/cygwin_cmake/bin/cmake.exe
+CMAKE_COMMAND = /cygdrive/c/Users/darki/.CLion2017.1/system/cygwin_cmake/bin/cmake.exe
 
 # The command to remove a file.
-RM = /cygdrive/c/Users/Alex/.CLion2017.1/system/cygwin_cmake/bin/cmake.exe -E remove -f
+RM = /cygdrive/c/Users/darki/.CLion2017.1/system/cygwin_cmake/bin/cmake.exe -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /cygdrive/c/Users/Alex/Documents/School/CSC-322/untitled
+CMAKE_SOURCE_DIR = /cygdrive/c/Users/darki/Documents/School/2017-Fall/CSC-322/Lab1/Simple-C-Calculator
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /cygdrive/c/Users/Alex/Documents/School/CSC-322/untitled/cmake-build-debug
+CMAKE_BINARY_DIR = /cygdrive/c/Users/darki/Documents/School/2017-Fall/CSC-322/Lab1/Simple-C-Calculator/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /cygdrive/c/Users/Alex/Documents/School/CSC-322/untitled/cmak
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/cygdrive/c/Users/Alex/.CLion2017.1/system/cygwin_cmake/bin/cmake.exe -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/cygdrive/c/Users/darki/.CLion2017.1/system/cygwin_cmake/bin/cmake.exe -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/cygdrive/c/Users/Alex/.CLion2017.1/system/cygwin_cmake/bin/cmake.exe -E echo No\ interactive\ CMake\ dialog\ available.
+	/cygdrive/c/Users/darki/.CLion2017.1/system/cygwin_cmake/bin/cmake.exe -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/Users/Alex/Documents/School/CSC-322/untitled/cmake-build-debug/CMakeFiles /cygdrive/c/Users/Alex/Documents/School/CSC-322/untitled/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/Users/darki/Documents/School/2017-Fall/CSC-322/Lab1/Simple-C-Calculator/cmake-build-debug/CMakeFiles /cygdrive/c/Users/darki/Documents/School/2017-Fall/CSC-322/Lab1/Simple-C-Calculator/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/Users/Alex/Documents/School/CSC-322/untitled/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/Users/darki/Documents/School/2017-Fall/CSC-322/Lab1/Simple-C-Calculator/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,17 +111,30 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named untitled
+# Target rules for targets named main
 
 # Build rule for target.
-untitled: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 untitled
-.PHONY : untitled
+main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 main
+.PHONY : main
 
 # fast build rule for target.
-untitled/fast:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/build
-.PHONY : untitled/fast
+main/fast:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
+.PHONY : main/fast
+
+#=============================================================================
+# Target rules for targets named main.c
+
+# Build rule for target.
+main.c: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 main.c
+.PHONY : main.c
+
+# fast build rule for target.
+main.c/fast:
+	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/build
+.PHONY : main.c/fast
 
 main.o: main.c.o
 
@@ -129,7 +142,8 @@ main.o: main.c.o
 
 # target to build an object file
 main.c.o:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/main.c.o
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.c.o
+	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/main.c.o
 .PHONY : main.c.o
 
 main.i: main.c.i
@@ -138,7 +152,8 @@ main.i: main.c.i
 
 # target to preprocess a source file
 main.c.i:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/main.c.i
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.c.i
+	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/main.c.i
 .PHONY : main.c.i
 
 main.s: main.c.s
@@ -147,8 +162,36 @@ main.s: main.c.s
 
 # target to generate assembly for a file
 main.c.s:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/main.c.s
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.c.s
+	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/main.c.s
 .PHONY : main.c.s
+
+solver.o: solver.c.o
+
+.PHONY : solver.o
+
+# target to build an object file
+solver.c.o:
+	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/solver.c.o
+.PHONY : solver.c.o
+
+solver.i: solver.c.i
+
+.PHONY : solver.i
+
+# target to preprocess a source file
+solver.c.i:
+	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/solver.c.i
+.PHONY : solver.c.i
+
+solver.s: solver.c.s
+
+.PHONY : solver.s
+
+# target to generate assembly for a file
+solver.c.s:
+	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/solver.c.s
+.PHONY : solver.c.s
 
 # Help Target
 help:
@@ -158,10 +201,14 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... untitled"
+	@echo "... main"
+	@echo "... main.c"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... solver.o"
+	@echo "... solver.i"
+	@echo "... solver.s"
 .PHONY : help
 
 

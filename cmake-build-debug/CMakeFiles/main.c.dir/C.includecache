@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/cygdrive/c/Users/darki/Documents/School/2017-Fall/CSC-322/Lab1/Simple-C-Calculator/main.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+stdbool.h
+-
+ctype.h
+-
+solver.h
+/cygdrive/c/Users/darki/Documents/School/2017-Fall/CSC-322/Lab1/Simple-C-Calculator/solver.h
+
+/cygdrive/c/Users/darki/Documents/School/2017-Fall/CSC-322/Lab1/Simple-C-Calculator/solver.c
+stdio.h
+-
+solver.h
+/cygdrive/c/Users/darki/Documents/School/2017-Fall/CSC-322/Lab1/Simple-C-Calculator/solver.h
+
+/cygdrive/c/Users/darki/Documents/School/2017-Fall/CSC-322/Lab1/Simple-C-Calculator/solver.h
+

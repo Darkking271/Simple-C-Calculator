@@ -1,4 +1,4 @@
-# Install script for directory: /cygdrive/c/Users/Alex/Documents/School/CSC-322/untitled
+# Install script for directory: /cygdrive/c/Users/darki/Documents/School/2017-Fall/CSC-322/Lab1/Simple-C-Calculator
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -35,5 +35,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/cygdrive/c/Users/Alex/Documents/School/CSC-322/untitled/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/cygdrive/c/Users/darki/Documents/School/2017-Fall/CSC-322/Lab1/Simple-C-Calculator/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
