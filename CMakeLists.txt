@@ -3,6 +3,6 @@ project(Simple-C-Calculator)
 
 set(CMAKE_C_STANDARD 99)
 
-set(SOURCE_FILES main.c solver.c solver.h)
-add_executable(main.c ${SOURCE_FILES})
-add_executable(main main.c)
+set(SOURCE_FILES lab1_avoytovi.c)
+add_executable(lab1_avoytovi.c ${SOURCE_FILES})
+add_executable(main lab1_avoytovi.c)
