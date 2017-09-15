@@ -124,74 +124,47 @@ main/fast:
 .PHONY : main/fast
 
 #=============================================================================
-# Target rules for targets named main.c
+# Target rules for targets named lab1_avoytovi.c
 
 # Build rule for target.
-main.c: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 main.c
-.PHONY : main.c
+lab1_avoytovi.c: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 lab1_avoytovi.c
+.PHONY : lab1_avoytovi.c
 
 # fast build rule for target.
-main.c/fast:
-	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/build
-.PHONY : main.c/fast
+lab1_avoytovi.c/fast:
+	$(MAKE) -f CMakeFiles/lab1_avoytovi.c.dir/build.make CMakeFiles/lab1_avoytovi.c.dir/build
+.PHONY : lab1_avoytovi.c/fast
 
-main.o: main.c.o
+lab1_avoytovi.o: lab1_avoytovi.c.o
 
-.PHONY : main.o
-
-# target to build an object file
-main.c.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.c.o
-	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/main.c.o
-.PHONY : main.c.o
-
-main.i: main.c.i
-
-.PHONY : main.i
-
-# target to preprocess a source file
-main.c.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.c.i
-	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/main.c.i
-.PHONY : main.c.i
-
-main.s: main.c.s
-
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.c.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.c.s
-	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/main.c.s
-.PHONY : main.c.s
-
-solver.o: solver.c.o
-
-.PHONY : solver.o
+.PHONY : lab1_avoytovi.o
 
 # target to build an object file
-solver.c.o:
-	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/solver.c.o
-.PHONY : solver.c.o
+lab1_avoytovi.c.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/lab1_avoytovi.c.o
+	$(MAKE) -f CMakeFiles/lab1_avoytovi.c.dir/build.make CMakeFiles/lab1_avoytovi.c.dir/lab1_avoytovi.c.o
+.PHONY : lab1_avoytovi.c.o
 
-solver.i: solver.c.i
+lab1_avoytovi.i: lab1_avoytovi.c.i
 
-.PHONY : solver.i
+.PHONY : lab1_avoytovi.i
 
 # target to preprocess a source file
-solver.c.i:
-	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/solver.c.i
-.PHONY : solver.c.i
+lab1_avoytovi.c.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/lab1_avoytovi.c.i
+	$(MAKE) -f CMakeFiles/lab1_avoytovi.c.dir/build.make CMakeFiles/lab1_avoytovi.c.dir/lab1_avoytovi.c.i
+.PHONY : lab1_avoytovi.c.i
 
-solver.s: solver.c.s
+lab1_avoytovi.s: lab1_avoytovi.c.s
 
-.PHONY : solver.s
+.PHONY : lab1_avoytovi.s
 
 # target to generate assembly for a file
-solver.c.s:
-	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/solver.c.s
-.PHONY : solver.c.s
+lab1_avoytovi.c.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/lab1_avoytovi.c.s
+	$(MAKE) -f CMakeFiles/lab1_avoytovi.c.dir/build.make CMakeFiles/lab1_avoytovi.c.dir/lab1_avoytovi.c.s
+.PHONY : lab1_avoytovi.c.s
 
 # Help Target
 help:
@@ -202,13 +175,10 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... main"
-	@echo "... main.c"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
-	@echo "... solver.o"
-	@echo "... solver.i"
-	@echo "... solver.s"
+	@echo "... lab1_avoytovi.c"
+	@echo "... lab1_avoytovi.o"
+	@echo "... lab1_avoytovi.i"
+	@echo "... lab1_avoytovi.s"
 .PHONY : help
 
 

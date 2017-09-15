@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/main.dir/main.c.o"
+  "CMakeFiles/main.dir/lab1_avoytovi.c.o"
   "main.pdb"
   "main.exe"
   "libmain.dll.a"

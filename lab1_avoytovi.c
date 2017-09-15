@@ -23,7 +23,8 @@
  */
 typedef struct Equation{
     int cmd;
-    int arg1;
+    int arg1_num;
+    struct Equation *arg1_cmd;
     int arg2_num;
     struct Equation *arg2_cmd;
 }eq;
@@ -41,6 +42,7 @@ typedef struct Option{
 bool check(char input[100], eq *equation, bool head);
 int parse(eq *equation, opt *option);
 int get_type(char in[100]);
+void free_eq(eq *equation);
 void collatz_sequence(int num);
 int format(int count);
 
@@ -64,7 +66,7 @@ int main() {
 
         if(check(input, equation, true)){
             if(equation->cmd == 5)
-                collatz_sequence(equation->arg1);
+                collatz_sequence(equation->arg1_num);
             else {
                 option->result = parse(equation, option);
                 if(option->option)
@@ -73,8 +75,9 @@ int main() {
             }
         }else{
             printf("Not a valid input!\n");
-            parse(equation, option);//used to free any built structures
         }
+
+        free_eq(equation);
 
         memset(input, 0, sizeof(input));
         printf("avoytovi>$ ");
@@ -99,7 +102,9 @@ int main() {
 bool check(char input[100], eq *equation, bool head){
     char num[30] = {'\0'};
     int type = get_type(input);
+    equation->cmd = type;
     memmove(input, input+4, strlen(input));//removes first 4 elements of string
+
     if(type == 5 && head){
 
         for(int i = 0; i < strlen(input); ++i){
@@ -107,25 +112,50 @@ bool check(char input[100], eq *equation, bool head){
                 num[i] = input[i];
             else return false;
         }
-        equation->cmd = type;
-        equation->arg1 = atoi(num);
-        if(equation->arg1 < 0)
+        equation->arg1_num = atoi(num);
+        if(equation->arg1_num < 0)
             return false;
         else return true;
 
     }else if(type == 1 || type == 2 || type == 3 || type == 4){
 
-        for(int i = 0; i < strlen(input); ++i) {
-            if (isdigit(input[i]))
-                num[i] = input[i];
-            else if (input[i] == ' ') {
-                memmove(input, input + i + 1, strlen(input));
-                break;
-            } else return false;
+        if(input[0] == '(') {//Checks if parameter is equation
+            memmove(input, input+1, strlen(input));
+            int para_count = 1;
+            int cut_point;
+            char in[100] = {'\0'};
+            for(int i = 0; i < strlen(input); ++i){
+                if(input[i] == '(')
+                    para_count++;
+                else if(input[i] == ')')
+                    para_count--;
+                if(para_count == 0) {
+                    cut_point = i;
+                    break;
+                }
+            }
+            strncpy(in, input, (size_t)cut_point);
+            memmove(input, input + cut_point + 2, strlen(input));
+            equation->arg1_cmd = malloc(sizeof(eq));
+            if(!check(in, equation->arg1_cmd, false))
+                return false;
+
+        }else{
+            for(int i = 0; i < strlen(input); ++i) {
+                if (isdigit(input[i]))
+                    num[i] = input[i];
+                else if (input[i] == ' ') {
+                    memmove(input, input + i + 1, strlen(input));
+                    break;
+                } else return false;
+            }
+            equation->arg1_num = atoi(num);
         }
-        equation->cmd = type;
-        equation->arg1 = atoi(num);
-        if(input[0] == '('){
+
+        if(input[0] == '\0')
+            return false;
+
+        if(input[0] == '('){//Checks if parameter is equation
             memmove(input, input + 1, strlen(input));
 
             if(input[strlen(input) - 1] == ')')
@@ -164,8 +194,11 @@ int parse(eq *equation, opt *option){
     if(equation->arg2_cmd != NULL){
         equation->arg2_num = parse(equation->arg2_cmd, option);
     }
-    int type = equation->cmd, arg1 = equation->arg1, arg2 = equation->arg2_num;
-    free(equation);
+    if(equation->arg1_cmd != NULL){
+        equation->arg1_num = parse(equation->arg1_cmd, option);
+    }
+
+    int type = equation->cmd, arg1 = equation->arg1_num, arg2 = equation->arg2_num;
 
     if(type == 4 && arg2 == 0){ //Handler for division by 0
         option->option = false;
@@ -199,6 +232,14 @@ int get_type(char in[100]){
     else if(in[0] == 'c' && in[1] == 'o' && in[2] == 'l')//col = 5
         return 5;
     else return 0;                                       //unrecognized = 0
+}
+
+void free_eq(eq *equation){
+    if(equation->arg1_cmd != NULL)
+        free_eq(equation->arg1_cmd);
+    if(equation->arg2_cmd != NULL)
+        free_eq(equation->arg2_cmd);
+    free(equation);
 }
 
 /** collatz_sequence

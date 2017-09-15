@@ -66,7 +66,7 @@ CMAKE_BINARY_DIR = /cygdrive/c/Users/darki/Documents/School/2017-Fall/CSC-322/La
 CMakeFiles/main.dir/all:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/depend
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/cygdrive/c/Users/darki/Documents/School/2017-Fall/CSC-322/Lab1/Simple-C-Calculator/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/cygdrive/c/Users/darki/Documents/School/2017-Fall/CSC-322/Lab1/Simple-C-Calculator/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target main"
 .PHONY : CMakeFiles/main.dir/all
 
 # Include target in all.
@@ -97,39 +97,39 @@ clean: CMakeFiles/main.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/main.c.dir
+# Target rules for target CMakeFiles/lab1_avoytovi.c.dir
 
 # All Build rule for target.
-CMakeFiles/main.c.dir/all:
-	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/depend
-	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/cygdrive/c/Users/darki/Documents/School/2017-Fall/CSC-322/Lab1/Simple-C-Calculator/cmake-build-debug/CMakeFiles --progress-num=3,4,5 "Built target main.c"
-.PHONY : CMakeFiles/main.c.dir/all
+CMakeFiles/lab1_avoytovi.c.dir/all:
+	$(MAKE) -f CMakeFiles/lab1_avoytovi.c.dir/build.make CMakeFiles/lab1_avoytovi.c.dir/depend
+	$(MAKE) -f CMakeFiles/lab1_avoytovi.c.dir/build.make CMakeFiles/lab1_avoytovi.c.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/cygdrive/c/Users/darki/Documents/School/2017-Fall/CSC-322/Lab1/Simple-C-Calculator/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target lab1_avoytovi.c"
+.PHONY : CMakeFiles/lab1_avoytovi.c.dir/all
 
 # Include target in all.
-all: CMakeFiles/main.c.dir/all
+all: CMakeFiles/lab1_avoytovi.c.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/main.c.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/Users/darki/Documents/School/2017-Fall/CSC-322/Lab1/Simple-C-Calculator/cmake-build-debug/CMakeFiles 3
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/main.c.dir/all
+CMakeFiles/lab1_avoytovi.c.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/Users/darki/Documents/School/2017-Fall/CSC-322/Lab1/Simple-C-Calculator/cmake-build-debug/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/lab1_avoytovi.c.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/Users/darki/Documents/School/2017-Fall/CSC-322/Lab1/Simple-C-Calculator/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/main.c.dir/rule
+.PHONY : CMakeFiles/lab1_avoytovi.c.dir/rule
 
 # Convenience name for target.
-main.c: CMakeFiles/main.c.dir/rule
+lab1_avoytovi.c: CMakeFiles/lab1_avoytovi.c.dir/rule
 
-.PHONY : main.c
-
-# clean rule for target.
-CMakeFiles/main.c.dir/clean:
-	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/clean
-.PHONY : CMakeFiles/main.c.dir/clean
+.PHONY : lab1_avoytovi.c
 
 # clean rule for target.
-clean: CMakeFiles/main.c.dir/clean
+CMakeFiles/lab1_avoytovi.c.dir/clean:
+	$(MAKE) -f CMakeFiles/lab1_avoytovi.c.dir/build.make CMakeFiles/lab1_avoytovi.c.dir/clean
+.PHONY : CMakeFiles/lab1_avoytovi.c.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/lab1_avoytovi.c.dir/clean
 
 .PHONY : clean
 

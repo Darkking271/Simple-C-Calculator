@@ -1,0 +1,1 @@
+/usr/bin/cc  -g  -Wl,--enable-auto-import CMakeFiles/lab1_avoytovi.c.dir/lab1_avoytovi.c.o  -o lab1_avoytovi.c.exe -Wl,--out-implib,liblab1_avoytovi.c.dll.a -Wl,--major-image-version,0,--minor-image-version,0 

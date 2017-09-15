@@ -57,38 +57,38 @@ include CMakeFiles/main.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/main.dir/flags.make
 
-CMakeFiles/main.dir/main.c.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/main.c.o: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/darki/Documents/School/2017-Fall/CSC-322/Lab1/Simple-C-Calculator/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/main.dir/main.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/main.c.o   -c /cygdrive/c/Users/darki/Documents/School/2017-Fall/CSC-322/Lab1/Simple-C-Calculator/main.c
+CMakeFiles/main.dir/lab1_avoytovi.c.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/lab1_avoytovi.c.o: ../lab1_avoytovi.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/darki/Documents/School/2017-Fall/CSC-322/Lab1/Simple-C-Calculator/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/main.dir/lab1_avoytovi.c.o"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/lab1_avoytovi.c.o   -c /cygdrive/c/Users/darki/Documents/School/2017-Fall/CSC-322/Lab1/Simple-C-Calculator/lab1_avoytovi.c
 
-CMakeFiles/main.dir/main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/main.dir/main.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /cygdrive/c/Users/darki/Documents/School/2017-Fall/CSC-322/Lab1/Simple-C-Calculator/main.c > CMakeFiles/main.dir/main.c.i
+CMakeFiles/main.dir/lab1_avoytovi.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/main.dir/lab1_avoytovi.c.i"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /cygdrive/c/Users/darki/Documents/School/2017-Fall/CSC-322/Lab1/Simple-C-Calculator/lab1_avoytovi.c > CMakeFiles/main.dir/lab1_avoytovi.c.i
 
-CMakeFiles/main.dir/main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.dir/main.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /cygdrive/c/Users/darki/Documents/School/2017-Fall/CSC-322/Lab1/Simple-C-Calculator/main.c -o CMakeFiles/main.dir/main.c.s
+CMakeFiles/main.dir/lab1_avoytovi.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.dir/lab1_avoytovi.c.s"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /cygdrive/c/Users/darki/Documents/School/2017-Fall/CSC-322/Lab1/Simple-C-Calculator/lab1_avoytovi.c -o CMakeFiles/main.dir/lab1_avoytovi.c.s
 
-CMakeFiles/main.dir/main.c.o.requires:
+CMakeFiles/main.dir/lab1_avoytovi.c.o.requires:
 
-.PHONY : CMakeFiles/main.dir/main.c.o.requires
+.PHONY : CMakeFiles/main.dir/lab1_avoytovi.c.o.requires
 
-CMakeFiles/main.dir/main.c.o.provides: CMakeFiles/main.dir/main.c.o.requires
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.c.o.provides.build
-.PHONY : CMakeFiles/main.dir/main.c.o.provides
+CMakeFiles/main.dir/lab1_avoytovi.c.o.provides: CMakeFiles/main.dir/lab1_avoytovi.c.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/lab1_avoytovi.c.o.provides.build
+.PHONY : CMakeFiles/main.dir/lab1_avoytovi.c.o.provides
 
-CMakeFiles/main.dir/main.c.o.provides.build: CMakeFiles/main.dir/main.c.o
+CMakeFiles/main.dir/lab1_avoytovi.c.o.provides.build: CMakeFiles/main.dir/lab1_avoytovi.c.o
 
 
 # Object files for target main
 main_OBJECTS = \
-"CMakeFiles/main.dir/main.c.o"
+"CMakeFiles/main.dir/lab1_avoytovi.c.o"
 
 # External object files for target main
 main_EXTERNAL_OBJECTS =
 
-main.exe: CMakeFiles/main.dir/main.c.o
+main.exe: CMakeFiles/main.dir/lab1_avoytovi.c.o
 main.exe: CMakeFiles/main.dir/build.make
 main.exe: CMakeFiles/main.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/cygdrive/c/Users/darki/Documents/School/2017-Fall/CSC-322/Lab1/Simple-C-Calculator/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable main.exe"
@@ -99,7 +99,7 @@ CMakeFiles/main.dir/build: main.exe
 
 .PHONY : CMakeFiles/main.dir/build
 
-CMakeFiles/main.dir/requires: CMakeFiles/main.dir/main.c.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/lab1_avoytovi.c.o.requires
 
 .PHONY : CMakeFiles/main.dir/requires
 
