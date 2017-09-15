@@ -234,6 +234,10 @@ int get_type(char in[100]){
     else return 0;                                       //unrecognized = 0
 }
 
+/** free_eq
+ * Frees the equation tree from memory.
+ * @param equation
+ */
 void free_eq(eq *equation){
     if(equation->arg1_cmd != NULL)
         free_eq(equation->arg1_cmd);
