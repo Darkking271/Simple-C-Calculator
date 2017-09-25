@@ -46,6 +46,7 @@ void free_eq(eq *equation);
 void collatz_sequence(int num);
 int format(int count);
 
+
 /** main
  * The main method of the C calculator. Takes the input from the user, checks and parses it, and displays the result.
  * The program continues to take input from the user until "bye" is entered. The program then quits and returns 0.
