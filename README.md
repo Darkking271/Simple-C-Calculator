@@ -13,7 +13,7 @@ errors. It will detect any errors in the input, as well as if the user tries to 
 | mul (sum 1 2) 12 | 36 |
 | div 12 (mul 3 2) | 1 |
 | sum (mul 2 (sum 11)) (mul (sub 3 2) 1) | 45 |
-| col 100 | 10 5 16 8 4 2 1 |
+| col 10 | 10 5 16 8 4 2 1 |
 
 | Example of improper input |
 |---|
